@@ -41,20 +41,29 @@ public class MainActivity extends AppCompatActivity {
 
     public void deleteButtonClick (View v) {
         Log.d("del", "delete ok");
-        inputNum = inputNum.substring(0, inputNum.length() - 1);
-        showInputNumToLayout(inputNum);
-        calculateDiscountPercent(Integer.parseInt(inputNum), discountPercent[0]);
+        if (inputNum.length() == 1) {
+            inputNum = inputNum.substring(0, inputNum.length() - 1);
+            showInputNumToLayout(inputNum);
+        } else if (inputNum.length() == 0) {
+        } else {
+            inputNum = inputNum.substring(0, inputNum.length() - 1);
+            showInputNumToLayout(inputNum);
+            calculateDiscountPercent(Integer.parseInt(inputNum), discountPercent[0]);
+
+        }
     }
+
+
 
 
     public void showInputNumToLayout (String inputNumString) {
         TextView inputNumShowTV = (TextView) findViewById(R.id.inputTextView);
-        inputNumShowTV.setText(inputNumString);
+        inputNumShowTV.setText(inputNumString + "円の、");
     }
 
     public void showResultNumToLayout (String resultNumString) {
         TextView resultNumShowTV = (TextView) findViewById(R.id.resulTextView);
-        resultNumShowTV.setText(resultNumString);
+        resultNumShowTV.setText(resultNumString + "円です。");
     }
 
 
@@ -96,8 +105,10 @@ public class MainActivity extends AppCompatActivity {
                         discountPercent[0] = 1;
                         break;
                 }
-                calculateDiscountPercent(Integer.parseInt(inputNum), discountPercent[0]);
-                Log.d("radio", "onCheckedChanged:" + discountPercent[0]);
+                if (inputNum.length() > 0){
+                    calculateDiscountPercent(Integer.parseInt(inputNum), discountPercent[0]);
+                    Log.d("radio", "onCheckedChanged:" + discountPercent[0]);
+                }
             }
         });
     }

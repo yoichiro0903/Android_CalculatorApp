@@ -5,95 +5,74 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:layout_gravity="bottom"
+    android:layout_marginLeft="20dp"
     tools:context="com.example.yoichirowatanabe.calculatorapp.MainActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="1.5"
+        android:textSize="20dp"
         android:id="@+id/inputTextView"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="の、"
-        android:id="@+id/inputTextViewLabel"/>
 
     <RadioGroup
         android:id="@+id/percentRadioGroup"
+        android:layout_weight="0.5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <!--<LinearLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:orientation="horizontal">-->
         <RadioButton
             android:id="@+id/radio10Percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10%OFF"/>
+            android:text="10%OFFは、"/>
         <RadioButton
             android:id="@+id/radio20Percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="20%OFF"/>
+            android:text="20%OFFは、"/>
         <RadioButton
             android:id="@+id/radio30Percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="30%OFF"/>
+            android:text="30%OFFは、"/>
         <RadioButton
             android:id="@+id/radio40Percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="40%OFF"/>
-        <!--</LinearLayout>-->
-
-        <!--<LinearLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:orientation="horizontal">-->
+            android:text="40%OFFは、"/>
         <RadioButton
             android:id="@+id/radio50Percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="50%OFF"/>
+            android:text="50%OFFは、"/>
         <RadioButton
             android:id="@+id/radio60Percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="60%OFF"/>
+            android:text="60%OFFは、"/>
         <RadioButton
             android:id="@+id/radio70Percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="70%OFF"/>
+            android:text="70%OFFは、"/>
         <RadioButton
             android:id="@+id/radio80Percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="80%OFF"/>
-        <!--</LinearLayout>-->
+            android:text="80%OFFは、"/>
         <RadioButton
             android:id="@+id/radio90Percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="90%OFF"/>
+            android:text="90%OFFは、"/>
     </RadioGroup>
-
+    
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="は、"
-        android:id="@+id/resulTextViewLabel"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="1.5"
+        android:textSize="20dp"
         android:id="@+id/resulTextView"/>
 
 
@@ -101,7 +80,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        android:layout_weight="1">
+        android:layout_weight="3">
         <Button
             android:id="@+id/buttonNum1"
             android:onClick="numButtonClick"
@@ -129,7 +108,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        android:layout_weight="1">
+        android:layout_weight="3">
         <Button
             android:id="@+id/buttonNum4"
             android:onClick="numButtonClick"
@@ -157,7 +136,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        android:layout_weight="1">
+        android:layout_weight="3">
         <Button
             android:id="@+id/buttonNum7"
             android:onClick="numButtonClick"
@@ -185,7 +164,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        android:layout_weight="1">
+        android:layout_weight="3">
         <Button
             android:id="@+id/buttonSetting"
             android:layout_weight="1"
