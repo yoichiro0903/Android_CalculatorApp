@@ -7,6 +7,96 @@
     android:layout_gravity="bottom"
     tools:context="com.example.yoichirowatanabe.calculatorapp.MainActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/inputTextView"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="の、"
+        android:id="@+id/inputTextViewLabel"/>
+
+    <RadioGroup
+        android:id="@+id/percentRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+        <RadioButton
+            android:id="@+id/radio10Percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10%OFF"/>
+        <RadioButton
+            android:id="@+id/radio20Percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20%OFF"/>
+        <RadioButton
+            android:id="@+id/radio30Percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30%OFF"/>
+        <RadioButton
+            android:id="@+id/radio40Percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="40%OFF"/>
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+        <RadioButton
+            android:id="@+id/radio50Percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50%OFF"/>
+        <RadioButton
+            android:id="@+id/radio60Percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="60%OFF"/>
+        <RadioButton
+            android:id="@+id/radio70Percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="70%OFF"/>
+        <RadioButton
+            android:id="@+id/radio80Percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="80%OFF"/>
+        <!--</LinearLayout>-->
+        <RadioButton
+            android:id="@+id/radio90Percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="90%OFF"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="は、"
+        android:id="@+id/resulTextViewLabel"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/resulTextView"/>
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -14,18 +104,21 @@
         android:layout_weight="1">
         <Button
             android:id="@+id/buttonNum1"
+            android:onClick="numButtonClick"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="1"/>
+            android:text="1" />
         <Button
             android:id="@+id/buttonNum2"
+            android:onClick="numButtonClick"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="2"/>
         <Button
             android:id="@+id/buttonNum3"
+            android:onClick="numButtonClick"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -39,18 +132,21 @@
         android:layout_weight="1">
         <Button
             android:id="@+id/buttonNum4"
+            android:onClick="numButtonClick"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="4"/>
         <Button
             android:id="@+id/buttonNum5"
+            android:onClick="numButtonClick"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="5"/>
         <Button
             android:id="@+id/buttonNum6"
+            android:onClick="numButtonClick"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -64,22 +160,52 @@
         android:layout_weight="1">
         <Button
             android:id="@+id/buttonNum7"
+            android:onClick="numButtonClick"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="7"/>
         <Button
             android:id="@+id/buttonNum8"
+            android:onClick="numButtonClick"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="8"/>
         <Button
             android:id="@+id/buttonNum9"
+            android:onClick="numButtonClick"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="9"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <Button
+            android:id="@+id/buttonSetting"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Setting"/>
+        <Button
+            android:id="@+id/buttonDelete"
+            android:onClick="deleteButtonClick"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="delete"/>
+        <Button
+            android:id="@+id/buttonNum0"
+            android:onClick="numButtonClick"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0"/>
     </LinearLayout>
 
 </LinearLayout>
